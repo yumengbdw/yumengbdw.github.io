@@ -87,16 +87,21 @@
 
 
 
-<meta name="description" content="我喜欢的名言，我喜欢的名言，或者介绍啥的都来一堆，显示出来。">
+<meta name="description" content="flex: 1,flexDirection: &amp;#39;column’,//决定布局的主轴。子元素是应该沿着水平轴(row)方向排列，还是沿着竖直轴(column)方向排列justifyContent: &amp;#39;center’,//可以决定其子元素沿着主轴的排列方式flex-start、center、flex-end、space-around以及space-betweenalignItems:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReactNative">
 <meta property="og:url" content="http://yumengbdw.com/2017/03/08/ReactNative/index.html">
 <meta property="og:site_name" content="oriyum">
-<meta property="og:description" content="我喜欢的名言，我喜欢的名言，或者介绍啥的都来一堆，显示出来。">
-<meta property="og:updated_time" content="2017-03-08T06:10:14.000Z">
+<meta property="og:description" content="flex: 1,flexDirection: &amp;#39;column’,//决定布局的主轴。子元素是应该沿着水平轴(row)方向排列，还是沿着竖直轴(column)方向排列justifyContent: &amp;#39;center’,//可以决定其子元素沿着主轴的排列方式flex-start、center、flex-end、space-around以及space-betweenalignItems:">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdejce5itrj30h604pglk.jpg">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNbRwgy1fdejef6m91j30h603tdfs.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fdejfq1v39j30h203na9z.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcxvh2ladxj30hw0my0tv.jpg">
+<meta property="og:updated_time" content="2017-03-08T06:18:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative">
-<meta name="twitter:description" content="我喜欢的名言，我喜欢的名言，或者介绍啥的都来一堆，显示出来。">
+<meta name="twitter:description" content="flex: 1,flexDirection: &amp;#39;column’,//决定布局的主轴。子元素是应该沿着水平轴(row)方向排列，还是沿着竖直轴(column)方向排列justifyContent: &amp;#39;center’,//可以决定其子元素沿着主轴的排列方式flex-start、center、flex-end、space-around以及space-betweenalignItems:">
+<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdejce5itrj30h604pglk.jpg">
 
 
 
@@ -342,7 +347,31 @@
       
 
       
-        
+        <p>flex: 1,<br><code>flexDirection: &#39;column’,</code>//决定布局的主轴。子元素是应该沿着水平轴(row)方向排列，还是沿着竖直轴(column)方向排列<br><code>justifyContent: &#39;center’,</code>//可以决定其子元素沿着主轴的排列方式<code>flex-start</code>、<code>center</code>、<code>flex-end</code>、<code>space-around</code>以及<code>space-between</code><br><code>alignItems: &#39;center’</code>,//沿着次轴（与主轴垂直的轴)排列<br><code>justifyContent</code>可以决定其子元素沿着主轴的排列方式<br><code>alignSelf</code>单个组件的对齐方式<br><code>flex</code>指设置伸缩项目的伸缩样式，可以把它类比成android中的weight属性。<br><code>flexWrap</code>同理可理解成为wrapContent。nowrap:即使空间不够也不换行。wrap:空间不够的话自动换行。 </p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fdejce5itrj30h604pglk.jpg" alt="space-between"></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwgy1fdejef6m91j30h603tdfs.jpg" alt="space-around"></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fdejfq1v39j30h203na9z.jpg" alt="center"></p>
+<p>1.<code>@complete</code>  基于其他可观测的变量动态计算出一个值<br><code>@observer</code> 给予组件响应数据变更的能力<br><code>@observable</code> 给予数据被外部观察变更的特性<br>e.g:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class Store &#123;</div><div class="line">    @observable first_name = &apos;Steven&apos;;</div><div class="line">    @observable last_name = &apos;Jobs&apos;;</div><div class="line"></div><div class="line">    @complete get full_name() &#123;</div><div class="line">        return this.first_name + this.last_name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.<code>autorun</code>将可观测的属性与函数绑定，任何有关此属性的变化，都将会自动执行绑定的函数。<br>e.g:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">autorun(() =&gt; &#123;</div><div class="line">    console.log(store.count);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>3.<code>@action</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">建议使用，任何改变可观测属性，或影响可观测属性的方法都建议加上此属性</div><div class="line">It is advised to use them on any function that modifies observables or has side effects</div></pre></td></tr></table></figure></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcxvh2ladxj30hw0my0tv.jpg" alt="生命周期"></p>
+<p><a href="http://stackoverflow.com/questions/3552461/how-to-format-a-javascript-date" target="_blank" rel="external">JS格式化时间戳</a></p>
+<p>Q&amp;A</p>
+<p>1.获取<code>package.json</code>文件里面的某个属性值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var customData = require(&apos;./customData.json&apos;);</div></pre></td></tr></table></figure></p>
+<p>2.有关路径的问题。<br><code>./components/Form.js</code>：当前目录/components/Form.js<br><code>../</code>当前目录的上一层。</p>
+<p>3.</p>
+<ul>
+<li>mobx的方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">class MyComponent extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123; /* initial state */ &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>ES6的方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var MyComponent = React.createClass(&#123;</div><div class="line">  getInitialState() &#123;</div><div class="line">    return &#123; /* initial state */ &#125;;</div><div class="line">  &#125;,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>4.箭头函数<br><code>=&gt;</code><br>用于对函数内部的上下文 （this）绑定为定义函数所在的作用域的上下文。也就是将上下文<code>this</code>绑定到函数内部使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//①</div><div class="line"> onChangeText = (text) =&gt; &#123;</div><div class="line">       this.props.formStore.setEnginNumber(text);</div><div class="line"> &#125;;</div></pre></td></tr></table></figure></p>
+<p>当然也可以在构造函数里面绑定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    //②</div><div class="line">    this.onChangeText = this.onChangeText.bind(this);</div><div class="line">	//③</div><div class="line">    this.onChangeText = (text) =&gt; &#123;</div><div class="line">    console.log(this.props);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">onChangeText（）&#123;</div><div class="line">     console.log(this.props);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
